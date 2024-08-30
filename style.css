@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tic-tac-toe {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* border: 1px solid red; */
+}
+.overlay{
+    width: 300px;
+    height: 300px;
+    /* border: 1px solid red; */
+    /* background-color: red; */
+    position: absolute;
+    bottom: 4px;
+    /* z-index: 1; */
+    left: 4px;
+}
+.tic-tac-toe h1{
+    text-align: center;
+}
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #f1f1f1;
+}
+
+.disabledbutton {
+    pointer-events: none;
+    /* opacity: 0.4; */
+}
+button{
+    background-color: green;
+    color: #fff;
+    padding: 20px 30px;
+    border: none;
+    outline: none;
+    margin-top: 40px;
+    cursor: pointer;
+    visibility: hidden;
+}
+h2{
+    text-align: center;
+}
+
+.row{
+    position: relative;
+}
+.line{
+    width: 0;
+    height: 5px;
+    border-radius: 10px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: width 1s ease;
+    transform-origin: left;
+
+}
+.v_line{
+    width: 5px;
+    height: 0%;
+    border-radius: 10px;
+    background-color: black;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: height 1s ease;
+    transform-origin: left;
+    z-index: 1;
+
+}
+.v_line.one{
+    top: 150%;
+    left: 15%;
+}
+
+.v_line.two{
+    top: 150%;
+    left: 50%;
+}
+
+.v_line.three{
+    top: 150%;
+    right: 15%;
+}
+.v_line.left_right{
+    height: 0%;
+    top: -19%;
+    left: 46%;
+    transform: rotate(-39deg);
+}
+.v_line.right_left{
+    height: 0%;
+    top: -19%;
+    left: 46%;
+    transform: rotate(39deg);
+}
